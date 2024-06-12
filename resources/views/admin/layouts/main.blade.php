@@ -47,6 +47,8 @@
             </nav>
             <!-- End Navbar -->
             @yield('content')
+
+            
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>

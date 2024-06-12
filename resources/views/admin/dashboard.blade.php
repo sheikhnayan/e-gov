@@ -6,7 +6,15 @@
                 <div class="col-md-12">
                     <div class="card  card-tasks">
                         <div class="card-header ">
+                            @foreach ($data as $key => $item)
+                            @if ($item->type == 'employee')
                             <h4 class="card-title">Employee Application list</h4>
+                            @elseif($item->type == 'foreign')
+                            <h4 class="card-title">Foreign Application list</h4>
+                            @else
+                            <h4 class="card-title">Russian Application list</h4>
+                            @endif
+                            @endforeach
                             {{-- <p class="card-category">Backend development</p> --}}
                         </div>
                         <div class="card-body ">
@@ -29,7 +37,13 @@
                                                 <td>{{ $item->mobile }}</td>
                                                 <td>{{ $item->status }}</td>
                                                 <td>
-                                                    <a href="/employee/{{ $item->id }}" class="btn btn-warning">Edit</a>
+                                                    @if ($item->type == 'employee')
+                                                        <a href="/employee/{{ $item->id }}" class="btn btn-warning">Edit</a>
+                                                    @elseif($item->type == 'foreign')
+                                                        <a href="/foreign/{{ $item->id }}" class="btn btn-warning">Edit</a>
+                                                    @else
+                                                    <a href="/russian/{{ $item->id }}" class="btn btn-warning">Edit</a>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @endforeach
