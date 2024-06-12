@@ -38,11 +38,11 @@
 						&nbsp;&nbsp;&nbsp;
 						<a href="bank_data.html" target="_blank" style="color:white;text-decoration:none;">Банковские
 							реквизиты</a>&nbsp;&nbsp;
-							<select id="langSel">
-                            <!-- <option value="ky">KG</option> -->
-                            <option value="{{route('/')}}" selected>RU</option>
-                            <option value="{{route('index.en')}}" >EN</option>
-                        </select>
+						<select id="langSel">
+							<!-- <option value="ky">KG</option> -->
+							<option value="{{route('/')}}" selected>RU</option>
+							<option value="{{route('index.en')}}">EN</option>
+						</select>
 					</td>
 				</tr>
 			</table>
