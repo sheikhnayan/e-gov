@@ -6,22 +6,30 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class EmployeeController extends Controller
+class ForeignController extends Controller
 {
 
     public function manageForeign()
     {
         if (Auth::user()->type == 'admin') {
             # code...
-            $data = User::where('type','employee')->latest()->get();
-            return view('admin.dashboard',compact('data'));
-        }else {
+            $data = User::where('type', 'foreign')->latest()->get();
+            return view('admin.dashboard', compact('data'));
+        } else {
             return back();
         }
     }
+
+    public function edit($id) {
+        return view('admin.foreigner',[
+            'data'=>User::find($id)
+        ]);
+        
+    }
+
     public function update(Request $request, $id)
     {
-        $update = User::where('id',$id)->update([
+        $update = User::where('id', $id)->update([
             'name' => $request->name,
             'last_name' => $request->last_name,
             'legal_entity' => $request->name_of_legal_entity,
@@ -41,6 +49,8 @@ class EmployeeController extends Controller
             'dob' => $request->dob,
             'place_of_birth' => $request->place_of_birth,
             'gender' => $request->gender,
+            'passport_1' => $request->passport_1,
+            'pasport_2' => $request->pasport_2,
             'country' => $request->country,
             'passport' => $request->passport,
             'date_issue' => $request->date_issue,
@@ -53,6 +63,6 @@ class EmployeeController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect(route('dashboard'))->with('success','Updated Successfully!');
+        return redirect(route('dashboard'))->with('success', 'Updated Successfully!');
     }
 }

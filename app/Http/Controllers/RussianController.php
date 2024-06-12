@@ -3,25 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
-class EmployeeController extends Controller
+class RussianController extends Controller
 {
-
-    public function manageForeign()
+    public function manageRussian()
     {
         if (Auth::user()->type == 'admin') {
             # code...
-            $data = User::where('type','employee')->latest()->get();
-            return view('admin.dashboard',compact('data'));
-        }else {
+            $data = User::where('type', 'rus')->latest()->get();
+            return view('admin.dashboard', compact('data'));
+        } else {
             return back();
         }
     }
+
+    public function edit($id) {
+        return view('admin.russian',[
+            'data'=>User::find($id)
+        ]);
+        
+    }
+
     public function update(Request $request, $id)
     {
-        $update = User::where('id',$id)->update([
+        $update = User::where('id', $id)->update([
             'name' => $request->name,
             'last_name' => $request->last_name,
             'legal_entity' => $request->name_of_legal_entity,
@@ -53,6 +60,6 @@ class EmployeeController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect(route('dashboard'))->with('success','Updated Successfully!');
+        return redirect(route('dashboard'))->with('success', 'Updated Successfully!');
     }
 }

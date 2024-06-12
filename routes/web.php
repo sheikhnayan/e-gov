@@ -4,8 +4,11 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmployeeController;
 use Spatie\LaravelPdf\Facades\Pdf;
+use App\Http\Controllers\ForeignController;
+use App\Http\Controllers\RussianController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -53,6 +56,13 @@ Route::get('/employee/{id}', function ($id) {
     return view('admin.employee',compact('data'));
 })->middleware(['auth'])->name('employee');
 Route::post('/employee/{id}/update', [EmployeeController::class, 'update'])->name('employee-update');
+Route::get('/foreign/{id}', [ForeignController::class, 'edit'])->name('edit-foreign');
+Route::post('/foreign/{id}/update', [ForeignController::class, 'update'])->name('foreign-update');
+Route::get('/manage-foreign', [ForeignController::class, 'manageForeign'])->name('manage.foreign');
+
+Route::get('/russian/{id}', [RussianController::class, 'edit'])->name('edit-russian');
+Route::post('/russian/{id}/update', [RussianController::class, 'update'])->name('russian-update');
+Route::get('/manage-russian', [RussianController::class, 'manageRussian'])->name('manage.russian');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

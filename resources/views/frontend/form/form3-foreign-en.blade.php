@@ -105,6 +105,15 @@
             </script>
             <!-- Date Picker -->
 
+
+
+
+
+
+
+
+            
+
             <form id="form3" action="/register" method="post"
                 enctype="multipart/form-data">
                 @csrf
