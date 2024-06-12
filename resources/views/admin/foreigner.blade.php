@@ -16,12 +16,12 @@
                                     <table cellpadding="4" cellspacing="4">
                                         <tr>
                                             <td><label class="lab_2899">Surname</label></td>
-                                            <td><input type="text" name="name" value="name" id="pred_lname" class="form-control" required="required"
+                                            <td><input type="text" name="name" value="{{ $data->name }}" id="pred_lname" class="form-control" required="required"
                                                     value="" /></td>
                                         </tr>
                                         <tr>
                                             <td><label class="lab_2899">Representative's name</label></td>
-                                            <td><input type="text" name="last_name" value="last_name" id="pred_fname" class="form-control" required="required"
+                                            <td><input type="text" name="last_name" value="{{ $data->last_name }}" id="pred_fname" class="form-control" required="required"
                                                     /></td>
                                         </tr>
                                  
@@ -323,7 +323,7 @@
                                         </tr>
                                         <tr>
                                             <td><label class="lab_2899"> Date Expire</label></td>
-                                            <td><input type="text" name="date_issue" value="{{ $data->date_expire }}" id="date_expire" class="form-control" required="required"
+                                            <td><input type="text" name="date_expire" value="{{ $data->date_expire }}" id="date_expire" class="form-control" required="required"
                                                  /></td>
                                         </tr>
 
