@@ -38,7 +38,10 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        <button type="submit"><span class="no-icon">Log out</span></button>
+                                    </form>
                                 </a>
                             </li>
                         </ul>
@@ -48,7 +51,7 @@
             <!-- End Navbar -->
             @yield('content')
 
-            
+
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>

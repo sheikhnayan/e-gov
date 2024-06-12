@@ -55,4 +55,28 @@ class EmployeeController extends Controller
 
         return redirect(route('dashboard'))->with('success','Updated Successfully!');
     }
+
+    public function add($id)
+    {
+        $data = User::find($id);
+
+        return view('admin.add',compact('data'));
+    }
+
+    public function submit(Request $request, $id)
+    {
+        // dd($request->all());
+
+        $user = User::find($id);
+        $user->number_of_work_permit = $request->number_of_work_permit;
+        $user->work_permit_validity = $request->work_permit_validity;
+        $user->organization = $request->organization;
+        $user->tax_payer_code = $request->tax_payer_code;
+        $user->work_region = $request->work_region;
+        $user->issue_date_and_time = $request->issue_date_and_time;
+        $user->status = $request->status;
+        $user->update();
+
+        return back()->with('success','updated!');
+    }
 }

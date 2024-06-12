@@ -21,7 +21,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('manage.russian')}}">
                     <i class="nc-icon nc-chart-pie-35"></i>
-                    <p>Employee</p>
+                    <p>Local</p>
                 </a>
             </li>
         </ul>

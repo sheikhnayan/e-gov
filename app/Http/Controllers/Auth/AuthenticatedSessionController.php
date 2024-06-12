@@ -29,7 +29,12 @@ class AuthenticatedSessionController extends Controller
 
         if (Auth::user()->status == 1) {
             # code...
-            return redirect()->intended(route('dashboard', absolute: false));
+            if (Auth::user()->type == 'admin') {
+                # code...
+                return redirect()->intended(route('dashboard', absolute: false));
+            }else{
+                return redirect(route('pdf',[Auth::user()->id]));
+            }
         }else {
             Auth::logout();
 

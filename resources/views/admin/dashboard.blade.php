@@ -44,6 +44,8 @@
                                                     @else
                                                     <a href="/russian/{{ $item->id }}" class="btn btn-warning">Edit</a>
                                                     @endif
+                                                    <a href="/add-data/{{ $item->id }}" class="btn btn-warning">Add Data</a>
+                                                    <a target="_blank" href="/pdf/{{ $item->id }}" class="btn btn-warning">View Data</a>
                                                 </td>
                                             </tr>
                                         @endforeach

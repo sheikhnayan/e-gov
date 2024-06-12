@@ -19,7 +19,7 @@ Route::get('pdf/{id}', function ($id) {
 
 
     return view('pdf', compact('data'));
-});
+})->name('pdf');
 
 Route::get('data/{id}', function ($id) {
     $data = User::find($id);
@@ -63,6 +63,10 @@ Route::get('/manage-foreign', [ForeignController::class, 'manageForeign'])->name
 Route::get('/russian/{id}', [RussianController::class, 'edit'])->name('edit-russian');
 Route::post('/russian/{id}/update', [RussianController::class, 'update'])->name('russian-update');
 Route::get('/manage-russian', [RussianController::class, 'manageRussian'])->name('manage.russian');
+
+route::get('add-data/{id}',[EmployeeController::class, 'add']);
+
+route::post('submit-data/{id}',[EmployeeController::class, 'submit'])->name('add-data');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
