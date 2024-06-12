@@ -66,14 +66,17 @@
 		<br><br>
 		<table cellpadding="4" cellspacing="4">
 			<tr>
-				<td><input type="text" id="login_username" class="inp_2289" placeholder="Логин" required="required" />
+                <form action="{{ route('login') }}" method="post">
+                    @csrf
+				<td><input type="text" id="login_username" name="user_name" class="inp_2289" placeholder="Логин" required="required" />
 				</td>
-				<td><input type="password" id="login_password" class="inp_2289" placeholder="Пароль"
+				<td><input type="password" name="password" id="login_password" class="inp_2289" placeholder="Пароль"
 						required="required" /></td>
-				<td>
-					<input type="button" class="btn_2289" value="Войти в личный кабинет" onclick="login();" />
-					<input type="button" class="btn_2289" value="Регистрация личного кабинета"
-						onclick="window.location='form1.html';" style="margin-left:10px;" />
+                    <td>
+                        <button type="submit" class="btn_2289" />Войти в личный кабинет</button>
+                        </form>
+					<a href="/register" class="btn_2289"
+						 style="margin-left:10px;" />Регистрация личного кабинета</a>
 				</td>
 			</tr>
 			<tr>

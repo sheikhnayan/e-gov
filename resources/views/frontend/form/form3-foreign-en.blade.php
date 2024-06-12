@@ -52,8 +52,8 @@
                         <td align="left" width="40%"><a href="index.html"><img
                                     src="{{ asset('frontendAsset') }}/images/kyrgyz_emblem6d24.png?n=1" class="logo_8789"
                                     height="81" /></a></td>
-                        <td align="left"><b> 	Электронные услуги выдачи разрешений на работу
-                            Электронные услуги регистрации Цифровой Кочевник</b></td>
+                        <td align="left"><b>Work permit issue web services<br>
+                                Digital nomad issue web services</b></td>
                     </tr>
                 </table>
             </div>
@@ -64,7 +64,7 @@
 
 
             <br><br><br>
-            <h2>Регистрация личного кабинета</h2><br><br>
+            <h2>Registration of personal cabinet</h2><br><br>
 
 
             <!-- Date Picker -->
@@ -110,31 +110,31 @@
                 @csrf
                 <table cellpadding="4" cellspacing="4">
                     <tr>
-                        <td><label class="lab_2899">Фамилия</label></td>
+                        <td><label class="lab_2899">Surname</label></td>
                         <td><input type="text" name="name" id="lname" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Имя</label></td>
+                        <td><label class="lab_2899">Name</label></td>
                         <td><input type="text" name="last_name" id="fname" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Отчество</label></td>
+                        <td><label class="lab_2899">Patronymic</label></td>
                         <td><input type="text" name="patronymic" id="pname" class="inp_2556" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Дата рождения</label></td>
+                        <td><label class="lab_2899">Date of birth</label></td>
                         <td><input type="text" name="dob" id="bdate" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Место рождения</label></td>
+                        <td><label class="lab_2899">Place of birth</label></td>
                         <td><input type="text" name="place_of_birth" id="birth_place" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Пол</label></td>
+                        <td><label class="lab_2899">Gender</label></td>
                         <td><select class="inp_2556" id="gender" name="gender" required="required">
                                 <option value="">Select</option>
                                 <option value="Male">Male</option>
@@ -142,7 +142,7 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Страна документа</label></td>
+                        <td><label class="lab_2899">Country</label></td>
                         <td>
                             <select class="inp_2556" id="doc_country" name="country" required="required">
                                 <opti>Select</opti>
@@ -410,27 +410,27 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номер паспорта</label></td>
+                        <td><label class="lab_2899">Passport number</label></td>
                         <td><input type="text" name="passport" id="doc_nom" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Дата выдачи документа</label></td>
+                        <td><label class="lab_2899">Passport issue date</label></td>
                         <td><input type="text" name="date_issue" id="doc_issue_date" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Дата действительности документа</label></td>
+                        <td><label class="lab_2899">Passport expiration date</label></td>
                         <td><input type="text" name="date_expire" id="doc_expiration_date"
                                 class="inp_2556 date_apaga" required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Лицо без гражданство</label></td>
+                        <td><label class="lab_2899">Person without citizenship</label></td>
                         <td><input type="checkbox" name="person_without_citizenship" id="bez_grajdanstvo_flag"
                                 value="1" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Образование:</label></td>
+                        <td><label class="lab_2899">Education</label></td>
                         <td><select class="inp_2556" id="education_level" name="education" required="required">
                                 <option value="">Select</option>
                                 <option value="higher education">higher education</option>
@@ -439,7 +439,7 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Семейное положение</label></td>
+                        <td><label class="lab_2899">Family status</label></td>
                         <td><select class="inp_2556" id="family_status" name="family_status" required="required">
                                 <option value="">Select</option>
                                 <option value="married">married</option>
@@ -447,27 +447,27 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номер мобильного телефона</label></td>
+                        <td><label class="lab_2899">Mobile phone</label></td>
                         <td><input type="text" name="mobile" id="mobile_phone" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Адрес электронной почты </label></td>
+                        <td><label class="lab_2899">Email address</label></td>
                         <td><input type="text" name="email" id="email_address" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номер WhatsApp: </label></td>
+                        <td><label class="lab_2899">WhatsApp</label></td>
                         <td><input type="text" name="whatsapp" id="whatsapp_number" class="inp_2556"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номер Viber: </label></td>
+                        <td><label class="lab_2899">Viber</label></td>
                         <td><input type="text" name="viber" id="Viber_number" class="inp_2556"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Фото</label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">Photo</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_2_table">
                                 <tr id="row_file_id_2_1">
@@ -645,7 +645,7 @@
                         }
                     </script>
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Фотокопия паспорта страница 1:</label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">Passport page 1</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_1_table">
                                 <tr id="row_file_id_1_1">
@@ -823,7 +823,7 @@
                         }
                     </script>
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Фотокопия паспорта страница 2:</label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">Passport page 2</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_3_table">
                                 <tr id="row_file_id_3_1">
@@ -1001,17 +1001,17 @@
                         }
                     </script>
                     <tr>
-                        <td><label class="lab_2899">Логин(латинские буквы и цифры)</label></td>
+                        <td><label class="lab_2899">Login(latin letters and figures)</label></td>
                         <td><input type="text" name="user_name" id="login_txt" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Пароль</label></td>
+                        <td><label class="lab_2899">Password</label></td>
                         <td><input type="password" name="password_txt" id="password_txt" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Повторить пароль</label></td>
+                        <td><label class="lab_2899">Repeat password</label></td>
                         <td><input type="password" name="password_confirmation" id="password_txt_repeat" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>

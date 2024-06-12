@@ -66,31 +66,34 @@
 
         <br><br><br>
         <h2>Registration of personal cabinet</h2><br><br>
+        <form action="{{ route('form1') }}" method="post">
+        @csrf
 
         <table cellpadding="4" cellspacing="4" width="700">
             <tr>
                 <td>
                     <b>Select type</b><br><br>
-                    <input type="radio" name="option_id" value="1" id="option_1" /> <label
+                    <input type="radio" name="option_id" value="1" id="option_1" required /> <label
                         for="option_1">Employer</label><br>
-                    <input type="radio" name="option_id" value="2" id="option_2" /> <label for="option_2">Foreign
+                    <input type="radio" name="option_id" value="2" id="option_2" required /> <label for="option_2">Foreign
                         individual entrepreneur</label>
-                    <br><input type="radio" name="option_id" value="3" id="option_3" /> <label for="option_3">Для
+                    <br><input type="radio" name="option_id" value="3" id="option_3" required /> <label for="option_3">Для
                         проекта "Цифровой кочевник"</label>
                     <br><br><br>
                     <a href="registration_agree.html" target="_blank">By creating a Personal Account and further using
                         this portal, you accept the terms of the user agreement and privacy policy</a> <input
-                        type="checkbox" id="agree" style="cursor: pointer;" /><br><br>
+                        type="checkbox" id="agree" style="cursor: pointer;" required/><br><br>
 
                     <!-- <img src="vasplusCaptcha27b6.jpg?rand=816349002" id="captchaimg" />
                     <img src="{{asset('frontendAsset')}}/images/refresh_icon.png" onClick="vpb_refresh_aptcha();" class="refreshIcon" />
-                    <input type="text" id="vpb_captcha_code" name="vpb_captcha_code" required /> 
+                    <input type="text" id="vpb_captcha_code" name="vpb_captcha_code" required />
                     <br><br><br>-->
 
-                    <input type="button" value="Next" class="btn_6655" onclick="form1Submit();" />
+                    <button type="submit" class="btn_6655">Next</button>
                 </td>
             </tr>
         </table>
+    </form>
 
 
 

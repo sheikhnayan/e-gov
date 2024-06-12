@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -19,8 +21,21 @@ Route::get('/form3-en', [FrontendController::class, 'form3_en'])->name('form3.en
 Route::get('/form4', [FrontendController::class, 'form4'])->name('form4');
 
 Route::get('/dashboard', function () {
-    return view('front.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    if (Auth::user()->type == 'admin') {
+        # code...
+        $data = User::where('type','employee')->latest()->get();
+        return view('admin.dashboard',compact('data'));
+    }else {
+        return back();
+    }
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/employee/{id}', function ($id) {
+    $data = User::find($id);
+
+    return view('admin.employee',compact('data'));
+})->middleware(['auth'])->name('employee');
+Route::post('/employee/{id}/update', [EmployeeController::class, 'update'])->name('employee-update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

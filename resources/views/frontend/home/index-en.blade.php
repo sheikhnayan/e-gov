@@ -66,26 +66,28 @@
 
 
         <br><br>
-        <table cellpadding="4" cellspacing="4">
-            <tr>
-                <td><input type="text" id="login_username" class="inp_2289" placeholder="Login" required="required" />
-                </td>
-                <td><input type="password" id="login_password" class="inp_2289" placeholder="Password"
-                        required="required" /></td>
-                <td>
-                    <input type="button" class="btn_2289" value="Login into personal cabinet" onclick="login();" />
-                    <input type="button" class="btn_2289" value="Create personal cabinet"
-                        onclick="window.location='form1.html';" style="margin-left:10px;" />
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" id="showPass" onclick="showPass();" /><label for="showPass">Show
-                        password</label></td>
-                <td><a href="change_password.html" class="href_2289">Forget password?</a></td>
-                <td></td>
-            </tr>
-        </table>
-
+        <form action="{{ route('login') }}" method="post">
+        @csrf
+            <table cellpadding="4" cellspacing="4">
+                <tr>
+                    <td><input type="text" id="login_username" class="inp_2289" name="user_name" placeholder="Login" required="required" />
+                    </td>
+                    <td><input type="password" id="login_password" name="password" class="inp_2289" placeholder="Password"
+                            required="required" /></td>
+                    <td>
+                        <input type="submit" class="btn_2289" value="Login into personal cabinet" />
+                        <input type="button" class="btn_2289" value="Create personal cabinet"
+                            onclick="window.location='/register';" style="margin-left:10px;" />
+                    </td>
+                </tr>
+                {{-- <tr>
+                    <td><input type="checkbox" id="showPass" onclick="showPass();" /><label for="showPass">Show
+                            password</label></td>
+                    <td><a href="change_password.html" class="href_2289">Forget password?</a></td>
+                    <td></td>
+                </tr> --}}
+            </table>
+        </form>
         <br><br>
 
         <style type="text/css">

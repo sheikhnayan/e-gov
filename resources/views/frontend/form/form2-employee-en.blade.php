@@ -64,7 +64,7 @@
 
 
             <br><br><br>
-            <h2>Регистрация личного кабинета цифрового кочевника</h2><br><br>
+            <h2>Registration of personal cabinet</h2><br><br>
 
 
             <form id="form2" action="/register" method="post"
@@ -72,45 +72,45 @@
                 @csrf
                 <table cellpadding="4" cellspacing="4">
                     <tr>
-                        <td><label class="lab_2899">Фамилия представителя</label></td>
+                        <td><label class="lab_2899">Representative's surname</label></td>
                         <td><input type="text" name="name" id="pred_lname" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Имя представителя</label></td>
+                        <td><label class="lab_2899">Representative's name</label></td>
                         <td><input type="text" name="last_name" id="pred_fname" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Наименование юридического лица</label></td>
+                        <td><label class="lab_2899">Name of legal entity</label></td>
                         <td>
                             <textarea name="name_of_legal_entity" id="entity_name" class="area_2556" required="required"></textarea>
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номер государственной регистрации</label></td>
+                        <td><label class="lab_2899">State registration number</label></td>
                         <td><input type="text" name="state_registration_number" id="gosreg_numb" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Идентификационный номер налогоплательщика</label></td>
+                        <td><label class="lab_2899">Tax payer code</label></td>
                         <td><input type="text" name="tax_payer_code" id="inn_numb" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Учредители</label></td>
+                        <td><label class="lab_2899">Founders of legal entity</label></td>
                         <td>
                             <textarea name="founders_of_legal_entity" id="entity_founders" class="area_2556" required="required"></textarea>
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Вид деятельности </label></td>
+                        <td><label class="lab_2899">Activity type</label></td>
                         <td>
                             <textarea name="activity_type" id="entity_activity_type" class="area_2556" required="required"></textarea>
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Адрес юридического лица</label></td>
+                        <td><label class="lab_2899">Legal address</label></td>
                         <td>
                             <textarea name="legal_address" id="entity_address" class="area_2556" required="required"></textarea>
                         </td>
@@ -230,23 +230,23 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Фактический адрес деятельности</label></td>
+                        <td><label class="lab_2899">Actual activity address</label></td>
                         <td>
                             <textarea name="actual_activity_address" id="entity_actual_address" class="area_2556" required="required"></textarea>
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Номера телефонов юридического лица</label></td>
+                        <td><label class="lab_2899">Phone number</label></td>
                         <td><input type="text" name="mobile" id="entity_phone" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Адрес электронной почты </label></td>
+                        <td><label class="lab_2899">Email address</label></td>
                         <td><input type="text" name="email" id="email_address" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Штатное расписание</label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">Staffing list</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_10_table">
                                 <tr id="row_file_id_10_1">
@@ -268,7 +268,7 @@
                     </tr>
 
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Свидетельство о юридической регистрации </label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">Legal registration certificate</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_8_table">
                                 <tr id="row_file_id_8_1">
@@ -290,7 +290,8 @@
                     </tr>
 
                     <tr>
-                        <td style="padding-top:20px"><label class="lab_2899">Лицензия на осуществление лицензируемой деятельности </label></td>
+                        <td style="padding-top:20px"><label class="lab_2899">License to carry out licensed
+                                activities</label></td>
                         <td style="padding-top:20px">
                             <table class="file_id_11_table">
                                 <tr id="row_file_id_11_1">
@@ -312,17 +313,17 @@
                     </tr>
 
                     <tr>
-                        <td><label class="lab_2899">Логин(латинские буквы и цифры)</label></td>
+                        <td><label class="lab_2899">Login(latin letters and figures)</label></td>
                         <td><input type="text" name="user_name" id="login_txt" class="inp_2556" required="required"
                                 value="" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Пароль</label></td>
+                        <td><label class="lab_2899">Password</label></td>
                         <td><input type="password" name="password_txt" id="password_txt" class="inp_2556"
                                 required="required" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" /></td>
                     </tr>
                     <tr>
-                        <td><label class="lab_2899">Повторить пароль</label></td>
+                        <td><label class="lab_2899">Repeat password</label></td>
                         <td><input type="password" name="password_confirmation" id="password_txt_repeat" class="inp_2556"
                                 required="required" value="" /></td>
                     </tr>
