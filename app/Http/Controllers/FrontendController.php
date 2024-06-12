@@ -24,4 +24,13 @@ class FrontendController extends Controller
    public function form2_en(){
     return view('frontend.form.form2-en');
    }
+   public function form3_ru(){
+    return view('frontend.form.form3-ru');
+   }
+   public function form3_en(){
+    return view('frontend.form.form3-en');
+   }
+   public function form4(){
+    return view('frontend.form.form4');
+   }
 }

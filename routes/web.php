@@ -14,6 +14,9 @@ Route::get('/form1-ru', [FrontendController::class, 'form1_ru'])->name('form1.ru
 Route::get('/form1-en', [FrontendController::class, 'form1_en'])->name('form1.en');
 Route::get('/form2-ru', [FrontendController::class, 'form2_ru'])->name('form2.ru');
 Route::get('/form2-en', [FrontendController::class, 'form2_en'])->name('form2.en');
+Route::get('/form3-ru', [FrontendController::class, 'form3_ru'])->name('form3.ru');
+Route::get('/form3-en', [FrontendController::class, 'form3_en'])->name('form3.en');
+Route::get('/form4', [FrontendController::class, 'form4'])->name('form4');
 
 Route::get('/dashboard', function () {
     return view('front.dashboard');
