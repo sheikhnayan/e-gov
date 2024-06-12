@@ -3,12 +3,29 @@
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmployeeController;
+use Spatie\LaravelPdf\Facades\Pdf;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('pdf/{id}', function ($id) {
+    $data = User::find($id);
+
+
+    return view('pdf', compact('data'));
+});
+
+Route::get('data/{id}', function ($id) {
+    $data = User::find($id);
+
+
+    return view('data', compact('data'));
+});
+
+
 
 Route::get('/', [FrontendController::class, 'index'])->name('/');
 Route::get('/index-en', [FrontendController::class, 'index_en'])->name('index.en');
