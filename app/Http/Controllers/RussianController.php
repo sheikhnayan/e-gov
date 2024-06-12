@@ -46,6 +46,8 @@ class RussianController extends Controller
             'email' => $request->email,
             'patronymic' => $request->patronymic,
             'dob' => $request->dob,
+            'passport_1' => $request->passport_1,
+            'pasport_2' => $request->pasport_2,
             'place_of_birth' => $request->place_of_birth,
             'gender' => $request->gender,
             'country' => $request->country,
